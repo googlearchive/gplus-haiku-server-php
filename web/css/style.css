@@ -1,0 +1,322 @@
+/* IE 9+ support, might want to consider alt */
+html {
+  background: url(/img/bg-japan.jpg) no-repeat center center fixed;
+  background-size: cover;
+
+  color: #191919;
+  font-size: 14px;
+  font-family: 'Exo 2', sans-serif;
+  font-variant: small-caps;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+body {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  margin-top: 0px;
+}
+
+.main {
+  min-width: 600px; /* random reasonable width */
+  max-width: 768px; /* iPad width pixels */
+  margin: 0 auto 0 auto;
+  background-color: #fff;
+  box-shadow: 0 10px 21px rgba(0,0,0,.34); /* drop shadow */
+  display: -webkit-box; /* drop shadow */
+  display: -webkit-flex; /* drop shadow */
+  display: -ms-flexbox; /* drop shadow */
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.disable-link {
+   pointer-events: none;
+   cursor: default;
+}
+
+.haiku-form-text {
+  background-color: #f8f4f1;
+  width: 290px;
+}
+
+.create-haiku {
+  font-size: 24px;
+  text-align: center;
+  margin: 0 0 0 15;
+  padding: 0 0 0 0;
+}
+
+.create-haiku-button {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 35px;
+}
+
+
+.create-haiku-button a:hover {
+  text-decoration: underline;
+  color:#fff;
+  background-color: #5d7523;
+  padding: 5px 25px 5px 25px;
+}
+
+.create-haiku-button a {
+  text-decoration: none;
+  color:#fff;
+  background-color: #8e9e65;
+  padding: 5 25 5 25;
+}
+
+.filter-bar {
+  color: #191919;
+  background-color: #fff;
+  min-width: 600px;
+  padding: 5 5 5 5;
+  text-align: center;
+}
+
+.filter-label {
+  padding: 30 0 25 0;
+}
+
+.filter-container {
+  width: 333px;
+  height: 30px;
+  opacity: .7;
+  background-color: #e7ebdf;
+  padding: 10 5 10 5;
+}
+
+.filter-bar a:hover {
+  text-decoration: underline;
+  color:#fff;
+  background-color: #5d7523;
+}
+
+a.active-button {
+  padding: 5 25 5 25;
+  color:#fff;
+  text-decoration: none;
+  background-color: #5d7523;
+}
+
+a.inactive-button {
+  padding: 5 25 5 25;
+  background-color: #e7ebdf;
+  text-decoration: none;
+  color: #191919;
+}
+
+.vote {
+  margin-top: 25px;
+  min-width: 600px;
+  text-align: center;
+}
+
+a.vote-button {
+  font-size: 18px;
+  font-weight: 100;
+  padding: 5 35 5 35;
+  background-color: #8e9e65;
+  text-decoration: none;
+  color: #FFFFFF;
+  letter-spacing: 5px;
+}
+
+.vote a:hover {
+  background-color: #5d7523;
+  color: #fff;
+  text-decoration: underline;
+}
+
+header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fff;
+  margin: 0px 5px 0px 5px;
+  padding: 30px 10px 30px 10px;
+  border-width: 1px;
+  border-style: none solid none solid;
+  border-color: #d6d6d6;
+}
+
+header .logo {
+  height: 45px;
+}
+
+header .msg {
+  letter-spacing: 2px;
+}
+
+/* need to fix FUOC */
+.signin-container {
+  height: 45px;
+  width: 300px;
+}
+
+#auth-buttons-area {
+  font-size: 14px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#auth-buttons-area a {
+  color:#000;
+  text-decoration: none;
+}
+
+#auth-buttons-area a:visited {
+  color:#000;
+  text-decoration: none;
+}
+
+#auth-buttons-area a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.haikus {
+  background-color: #fff; /* layer fill content */
+  border-width: 1px;
+  border-style: solid solid solid solid;
+  border-color: #d6d6d6;
+  margin: 0px 5px 5px 5px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+
+/*  min-height: 768px;  hack, need a better solution for 1 haiku */
+}
+
+.haiku {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-top: 50px;
+}
+
+.haiku a {
+  color: #191919;
+  text-decoration: none;
+}
+
+.haiku a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.haiku .title {
+  color: #191919;
+  font-weight: 100;
+  letter-spacing: 2px;
+  font-size: 28px;
+}
+
+.haiku .haiku-body {
+  color: #191919;
+  font-size: 18px;
+}
+
+.haiku .avatar {
+  margin-top: 10px;
+}
+
+.haiku .author {
+  margin-top: 20px;
+}
+
+.haiku .date {
+  margin-top: 5px;
+}
+
+.haiku .votes {
+  margin-top: 15px;
+}
+
+.haiku hr {
+  width: 100px;
+  margin-top: 50px;
+}
+
+#profileDetails {
+  font-size: 14px;
+  color: #000;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.profile-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}

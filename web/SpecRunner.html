@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+  "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Jasmine Spec Runner</title>
+  <link rel="stylesheet" type="text/css"
+      href="//cdnjs.cloudflare.com/ajax/libs/jasmine/1.3.1/jasmine.css">
+  <script type="text/javascript"
+      src="//cdnjs.cloudflare.com/ajax/libs/jasmine/1.3.1/jasmine.js"></script>
+  <script type="text/javascript"
+      src="//cdnjs.cloudflare.com/ajax/libs/jasmine/1.3.1/jasmine-html.js">
+  </script>
+  <!-- jQuery includes -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+
+  <!-- include source files here... -->
+  <!-- JavaScript specific to this application -->
+  <script type="text/javascript" src="js/haikuplus/controller.js"></script>
+  <script type="text/javascript" src="js/haikuplus/helper.js"></script>
+  <script type="text/javascript" src="js/haikuplus/model.js"></script>
+  <script type="text/javascript" src="js/haikuplus/view.js"></script>
+  <script type="text/javascript" src="spec/mockdata.js"></script>
+
+  <!-- include spec files here... -->
+  <script type="text/javascript" src="spec/signinspec.js"></script>
+  <script type="text/javascript" src="spec/haikuspec.js"></script>
+  <script type="text/javascript" src="spec/helperspec.js"></script>
+
+  <!-- http://sinonjs.org/ -->
+  <script type="text/javascript" src="js/3p/sinon-1.7.3.js"></script>
+
+  <script type="text/javascript">
+    (function() {
+      var jasmineEnv = jasmine.getEnv();
+      jasmineEnv.updateInterval = 1000;
+
+      var htmlReporter = new jasmine.HtmlReporter();
+
+      jasmineEnv.addReporter(htmlReporter);
+
+      jasmineEnv.specFilter = function(spec) {
+        return htmlReporter.specFilter(spec);
+      };
+
+      var currentWindowOnload = window.onload;
+
+      window.onload = function() {
+        if (currentWindowOnload) {
+          currentWindowOnload();
+        }
+        execJasmine();
+      };
+
+      function execJasmine() {
+        jasmineEnv.execute();
+      }
+
+    })();
+  </script>
+</head>
+
+<body>
+  <div style="display:none">
+    <div id="site-container">
+      <div id="header" style=" ">
+        <span id="title">Haikus</span>
+        <span id="site-buttons">
+          <span id="signin-container" style="display:block;">
+            <span
+              class="g-signin"
+              data-callback="onSignInCallback"
+              data-clientid="{{ YOUR_CLIENT_ID }}"
+              data-cookiepolicy="single_host_origin"
+              data-scope="https://www.googleapis.com/auth/plus.login">
+            </span>
+          </span>
+          <span id="auth-area-container" style="display:none;">
+            <span id="user-profile-container">
+              <!-- insert profile HTML here -->
+            </span>
+            <!-- Appear when the user is signed in -->
+            <span id="auth-buttons-area">
+              <button>Sign out</button>
+              <button>Disconnect</button>
+            </span>
+          </span>
+        </span>
+      </div>
+      <br/>
+      <div id="filter-bar">
+        <span id='filter-controls'>
+          Haikus by: <a href="#">Everyone</a> | Friends
+        </span>
+        <span style="position:absolute; right:5px;">
+          <!-- Enabled when the user is signed in -->
+          <button id="create-button" onClick="haikuPlus.Controller.createHaiku()" disabled>
+            Create Haiku
+          </button>
+        </span>
+      </div>
+      <br/>
+      <div id="create-haiku-form" title="Create new Haiku">
+        <form class="create-haiku">
+        <fieldset>
+          <table>
+          <tr>
+            <td>
+              <label for="">Title</label>
+            </td>
+            <td>
+              <input type="text" name="create-haiku-title" id="create-haiku-title" class="text ui-widget-content ui-corner-all">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="">First Phrase (5)</label>
+            </td>
+            <td>
+              <input type="text" name="phrase-1" id="phrase-1" class="text ui-widget-content ui-corner-all">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="">Second Phrase (7)</label>
+            </td>
+            <td>
+              <input type="text" name="phrase-2" id="phrase-2" class="text ui-widget-content ui-corner-all">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="phrase-3">Third Phrase (5)</label>
+            </td>
+            <td>
+              <input type="text" name="phrase-3" id="phrase-3" class="text ui-widget-content ui-corner-all">
+            </td>
+          </tr>
+          </table>
+        </fieldset>
+        </form>
+      </div>
+
+
+      <!-- A modal for reauthorization.  -->
+      <div id="reauthorization-modal" title="Reconnect with Haiku+">
+          <p>
+            Something has gone wrong and you must reconnect Google to the
+            Haiku+ server. Sign in below to reconnect.
+          </p>
+          <span id="reauthorization-button-container">
+            <span
+              class="g-signin"
+              data-accesstype="offline"
+              data-callback="onSignInCallback"
+              data-clientid="{{ YOUR_CLIENT_ID }}"
+              data-cookiepolicy="none"
+              data-approvalprompt="force"
+              data-scope="https://www.googleapis.com/auth/plus.login">
+            </span>
+          </span>
+      </div>
+      <br/>
+      <div id="haikus-container" class='haiku-area'>
+        <!-- insert haikus here -->
+        <div style="clear:both"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  <!-- anything extra can go here -->
+  </script>
+</body>
+</html>

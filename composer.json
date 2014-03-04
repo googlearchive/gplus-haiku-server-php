@@ -1,0 +1,19 @@
+{
+    "name": "googleplus/haikusplus",
+    "description": "This is a sample app for Google+ Sign-In.",
+    "license": "Apache-2.0",
+    "require": {
+        "silex/silex": "1.0.*@dev",
+        "twig/twig": ">=1.8,<2.0-dev",
+        "doctrine/dbal": "2.2.*",
+        "google/apiclient": "v1.0.1-beta"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    },
+    "minimum-stability": "alpha",
+    "autoload": {
+        "psr-0": { "HaikuPlus": "./src" }
+    }
+}
+

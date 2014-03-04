@@ -1,0 +1,9 @@
+<phpunit
+  bootstrap="vendor/autoload.php">
+  <testsuites>
+    <testsuite name="HaikuPlus test suite">
+      <directory>tests</directory>
+    </testsuite>
+  </testsuites>
+</phpunit>
+
