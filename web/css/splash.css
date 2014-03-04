@@ -1,0 +1,85 @@
+/** 
+ * Splash Screen styles. A few changes relative to the mocks:
+ * 
+ * 1) Font used in mockups is not available as a web font.
+ * 2) Background is calculated as opposed to dynamic (Mocks had layered bgs)
+ */
+
+/* IE 9+ support, might want to consider alt */
+html { 
+  background: url(../img/bg-japan.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* CSS I pulled out of a hat */
+.splash-box-background {
+  margin-top: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 94px;
+  height: 1px;
+  background-color: #191919; /* layer fill content */
+}
+
+.splash-haiku-text {
+  margin-top: 50px;
+  color: #191919; /* text color */
+  /* font-family: "Orator Std"; design agency used proprietary font     */
+  /* Exo 2 from Google web fonts with some tricky kearning can simulate */
+  /* Additional candidates were: FF Eurieka Mono, Pragma, ITC, T-Star   */
+  font-family: 'Exo 2', sans-serif;
+  font-variant: small-caps;
+  font-weight: 400;
+  font-size: 20;
+  letter-spacing: 2px;
+
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.splash-bg-box-outer {
+  margin-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 621px;
+  height: 336px;
+  background-color: #fff; /* layer fill content */
+  box-shadow: 0 10px 21px rgba(0,0,0,.34); /* drop shadow */
+  z-index: 4;
+}
+
+.splash-bg-box-inner {
+  position: absolute;
+  margin-top: 8px;
+  margin-left: 8px;
+  margin-right: auto;
+
+  width: 603px;
+  height: 319px;
+  background-color: #fff; /* layer fill content */
+  border-width: 1px;
+  border-style: solid;
+  border-color: #d6d6d6;
+}
+
+.splash-start-box {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+
+  width: 151px;
+  height: 41px;
+  background-color: #5d7523; /* layer fill content */
+  position: relative;
+}
+
+.splash-logo {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -11px;
+  width: 190px;
+}
